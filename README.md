@@ -6,13 +6,6 @@ An AI-powered support ticket analysis system that ingests CSV data, makes it que
 
 ## 🚀 Setup Instructions
 
-> **Important:** Before re-running the project, delete the existing database to avoid conflicts:
-> ```bash
-> del tickets.db        # Windows Command Prompt
-> # or
-> rm tickets.db         # macOS / Linux / Git Bash
-> ```
-
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Sarathbabu1106/support-ticket-ai.git
@@ -26,12 +19,6 @@ An AI-powered support ticket analysis system that ingests CSV data, makes it que
 
 3. **Prepare the dataset**
    - Place `support_tickets.csv` in the project root.
-   - (Optional but recommended before re-run) Delete old database:
-     ```bash
-     del tickets.db        # Windows
-     # or
-     rm tickets.db         # macOS / Linux
-     ```
    - Run the loader script to create `tickets.db`:
      ```bash
      python scripts/load_csv.py
@@ -208,24 +195,17 @@ support-ticket-ai/
    pip install -r requirements.txt
    ```
 
-3. **(Optional but recommended before re-run) Delete old database**
-   ```bash
-   del tickets.db        # Windows
-   # or
-   rm tickets.db         # macOS / Linux
-   ```
-
-4. **Load dataset into SQLite**
+3. **Load dataset into SQLite**
    ```bash
    python scripts/load_csv.py
    ```
 
-5. **Run the FastAPI backend**
+4. **Run the FastAPI backend**
    ```bash
    uvicorn app.main:app --reload
    ```
 
-6. **Run the Streamlit UI**
+5. **Run the Streamlit UI**
    ```bash
    streamlit run ui/app_ui.py
    ```
