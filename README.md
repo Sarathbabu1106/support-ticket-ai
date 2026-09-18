@@ -13,8 +13,8 @@ An AI-powered support ticket analysis system that ingests CSV data, makes it que
 
 2. Install dependencies
 
-bash
 pip install -r requirements.txt
+
 
 3. Prepare the dataset
 
